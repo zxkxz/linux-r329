@@ -1365,5 +1365,19 @@ config TOUCHSCREEN_ZINITIX
 
 	  To compile this driver as a module, choose M here: the
 	  module will be called zinitix.
-
-endif
+		
+config TOUCHSCREEN_CST816
+		bool "Hynitron touchpanel CST816 series"
+		depends on I2C
+		help
+			Say Y here if you have a Hynitron CST816 touchscreen.
+			CST816 controllers are multi touch controllers which can
+			report 5 touches at a time.
+		
+			If unsure, say N.
+		
+	
+	
+	endif
+	
+	source "drivers/input/touchscreen/cst816/Kconfig"

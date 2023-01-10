@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# Touchscreen driver configuration
+#
+config HYN_CST8XX_TOUCHSCREEN_SUPPORT
+	bool "hyn_cst8xx for touchscreen"
+	depends on TOUCHSCREEN_CST816
+	default n
+	help
+	Say Y here if you have hyn_cst816 touch panel GTP_POWER_CTRL_SLEEP.
+	If unsure, say N.
+	To compile this dirver as a module, choose M here: the
+	module will be called.
